@@ -1,44 +1,88 @@
 <!DOCTYPE html>
-<html lang="ko">
+<html class="light" lang="ko">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Blog | Siwoo's Blog</title>
-    <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=Fira+Code&display=swap" rel="stylesheet">
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>Blog & Tech Hub | Siwoo</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space_Grotesk:wght@700&display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <style>
+        .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; }
+        .glass-nav { background: rgba(255, 255, 255, 0.8); backdrop-filter: blur(24px); }
+    </style>
 </head>
-<body>
-    <nav class="glass-nav">
-        <div class="logo"><code>&lt;siwoo_blog/&gt;</code></div>
-        <ul class="nav-links">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="blog.html" class="active">Blog</a></li>
-        </ul>
-    </nav>
+<body class="bg-[#f5f7f9] text-[#2c2f31] font-['Inter']">
 
-    <div class="container">
-        <h1 class="page-title fade-in-up">Latest <span class="highlight">Posts</span></h1>
-        
-        <div class="blog-grid fade-in-up delay-1">
-            <a href="post.html" class="blog-card">
-                <div class="blog-card-date">2026. 03. 31</div>
-                <h2 class="blog-card-title">소프트웨어 공학과 첫 전공 수업 후기</h2>
-                <div class="blog-card-desc">기대 반 걱정 반으로 시작한 첫 전공 수업, C언어 프로그래밍. 변수와 자료형부터 배웠는데 생각보다 재미있었다!</div>
-            </a>
-            <a href="post.html" class="blog-card">
-                <div class="blog-card-date">2026. 03. 25</div>
-                <h2 class="blog-card-title">Git과 GitHub 처음 사용해보기</h2>
-                <div class="blog-card-desc">개발자의 필수 교양이라는 Git. add, commit, push의 개념을 정리해본다.</div>
-            </a>
-            <a href="post.html" class="blog-card">
-                <div class="blog-card-date">2026. 03. 10</div>
-                <h2 class="blog-card-title">나만의 기술 블로그 만들기 프로젝트</h2>
-                <div class="blog-card-desc">벨로그나 티스토리를 쓸까 고민하다가, 프론트엔드 공부도 할 겸 직접 만들어보기로 결심했다.</div>
-            </a>
+<header class="sticky top-0 w-full z-50 glass-nav shadow-sm">
+    <div class="flex items-center justify-between px-6 py-4 max-w-7xl mx-auto">
+        <div class="flex items-center gap-3">
+            <span class="material-symbols-outlined text-blue-600" data-icon="terminal">terminal</span>
+            <span class="text-2xl font-bold tracking-tighter text-slate-900 font-['Space_Grotesk']">The Editorial Architect</span>
         </div>
+        <nav class="hidden md:flex items-center gap-8 text-sm font-medium">
+            <a class="text-slate-600 hover:text-blue-500 transition-colors duration-200" href="index.html">Home</a>
+            <a class="text-blue-600 border-b-2 border-blue-600 transition-colors duration-200" href="blog.html">Blog & Tech</a>
+            <a class="text-slate-600 hover:text-blue-500 transition-colors duration-200" href="gaming.html">Gaming</a>
+            <a class="text-slate-600 hover:text-blue-500 transition-colors duration-200" href="about.html">About</a>
+        </nav>
     </div>
+</header>
 
-    <script src="script.js"></script>
+<main class="max-w-7xl mx-auto px-6 pt-12 pb-24">
+    <!-- Hero Section -->
+    <section class="mb-20">
+        <div class="flex flex-col md:flex-row md:items-end justify-between gap-8 mb-12">
+            <div class="max-w-2xl">
+                <h1 class="text-6xl font-bold tracking-tighter leading-none mb-6 font-['Space_Grotesk']">CS & Hardware<br/><span class="text-[#0057bd]">기술 허브</span></h1>
+                <p class="text-gray-600 text-lg max-w-lg">컴퓨터 공학의 기초와 하드웨어 아키텍처에 대한 기록. 최신 웹 개발 트렌드부터 정밀한 코딩 문제 풀이까지.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Deep Dives -->
+    <section class="mb-24">
+        <div class="flex items-center justify-between mb-8">
+            <h2 class="text-3xl font-bold tracking-tight font-['Space_Grotesk']">최신 포스트</h2>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <a href="post.html" class="md:col-span-2 group relative overflow-hidden rounded-xl bg-white shadow-sm hover:shadow-xl transition-all block">
+                <div class="aspect-[16/9] w-full bg-slate-200">
+                    <img alt="Thumbnail" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700" src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?q=80&w=2670&auto=format&fit=crop"/>
+                </div>
+                <div class="p-8">
+                    <div class="flex items-center gap-3 mb-4">
+                        <span class="px-3 py-1 bg-blue-100 text-blue-800 text-xs font-bold uppercase tracking-wider rounded">DevLog</span>
+                        <span class="text-gray-500 text-xs">2026. 03. 31</span>
+                    </div>
+                    <h3 class="text-3xl font-bold mb-4 font-['Space_Grotesk']">소프트웨어 공학과 첫 전공 수업 후기</h3>
+                    <p class="text-gray-600 line-clamp-2 mb-6">기대 반 걱정 반으로 시작한 첫 전공 수업, C언어 프로그래밍. 메모리와 포인터의 방대함 속으로...</p>
+                    <span class="text-[#0057bd] font-bold inline-flex items-center gap-2">자세히 읽기 →</span>
+                </div>
+            </a>
+
+            <div class="flex flex-col gap-6">
+                <a href="#" class="p-6 rounded-xl bg-gray-200 hover:bg-gray-300 transition-colors block group">
+                    <span class="text-xs font-bold text-blue-600 uppercase tracking-widest mb-3 block">Web</span>
+                    <h3 class="text-xl font-bold mb-2 group-hover:text-blue-800 transition-colors">HTML/CSS 마스터하기</h3>
+                    <p class="text-sm text-gray-600">Tailwind를 활용한 UI 구축 삽질기</p>
+                </a>
+                <a href="#" class="p-6 rounded-xl bg-gray-200 hover:bg-gray-300 transition-colors block group">
+                    <span class="text-xs font-bold text-blue-600 uppercase tracking-widest mb-3 block">Algorithm</span>
+                    <h3 class="text-xl font-bold mb-2 group-hover:text-blue-800 transition-colors">백준 단계별풀이: 정렬</h3>
+                    <p class="text-sm text-gray-600">Quick sort vs Merge sort</p>
+                </a>
+            </div>
+        </div>
+    </section>
+</main>
+
+<footer class="w-full mt-20 bg-slate-100 border-t border-slate-200">
+    <div class="flex flex-col md:flex-row justify-between items-center px-12 py-8 max-w-7xl mx-auto">
+        <p class="text-xs uppercase tracking-widest text-slate-500 mb-4 md:mb-0">
+            © 2026 Siwoo Park | The Editorial Architect.
+        </p>
+    </div>
+</footer>
 </body>
 </html>

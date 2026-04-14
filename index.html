@@ -1,107 +1,145 @@
 <!DOCTYPE html>
-<html lang="ko">
+<html class="light" lang="ko">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Siwoo's Blog | 정시우</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=Fira+Code&display=swap" rel="stylesheet">
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>The Editorial Architect | Siwoo</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space_Grotesk:wght@700&display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script id="tailwind-config">
+          tailwind.config = {
+            darkMode: "class",
+            theme: {
+              extend: {
+                "colors": {
+                        "primary": "#0057bd",
+                        "surface-container-low": "#eef1f3",
+                        "surface-container-highest": "#d9dde0",
+                        "on-surface": "#2c2f31",
+                        "surface-variant": "#d9dde0",
+                        "surface-container": "#e5e9eb",
+                        "inverse-surface": "#0b0f10",
+                        "outline-variant": "#abadaf",
+                        "surface-container-lowest": "#ffffff",
+                        "surface-container-high": "#dfe3e6",
+                        "on-surface-variant": "#595c5e",
+                        "primary-container": "#6e9fff",
+                        "on-primary": "#f0f2ff",
+                        "inverse-primary": "#4d8eff",
+                        "background": "#f5f7f9",
+                        "surface-bright": "#f5f7f9",
+                        "surface": "#f5f7f9"
+                },
+                "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "2xl": "1.5rem",
+                        "full": "9999px"
+                },
+                "fontFamily": {
+                        "headline": ["Space Grotesk"],
+                        "body": ["Inter"],
+                        "label": ["Inter"]
+                }
+              },
+            },
+          }
+    </script>
+    <style>
+        .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; }
+        .glass-nav { background: rgba(255, 255, 255, 0.8); backdrop-filter: blur(24px); }
+        .hero-gradient { background: linear-gradient(135deg, #0057bd 0%, #6e9fff 100%); }
+    </style>
 </head>
-<body>
-    <nav class="glass-nav">
-        <div class="logo"><code>&lt;siwoo_blog/&gt;</code></div>
-        <ul class="nav-links">
-            <li><a href="index.html" class="active">Home</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="blog.html">Blog</a></li>
-        </ul>
-    </nav>
-    <header class="hero">
-        <div class="hero-content">
-            <h1 class="fade-in-up">Hello, World!<br>I'm <span class="highlight">정시우</span>.</h1>
-            <p class="fade-in-up delay-1">이곳은 컴퓨터 소프트웨어 공학과 신입생 정시우가 공부하며 기록을 남기는 공간입니다. 코딩, 알고리즘, 그리고 개발 일상을 공유합니다.</p>
-            <a href="blog.html" class="btn primary fade-in-up delay-2">최신 글 보기</a>
+<body class="bg-surface text-on-surface font-body">
+
+<header class="sticky top-0 w-full z-50 glass-nav shadow-sm">
+    <div class="flex items-center justify-between px-6 py-4 max-w-7xl mx-auto">
+        <div class="flex items-center gap-3">
+            <span class="material-symbols-outlined text-blue-600" data-icon="terminal">terminal</span>
+            <span class="text-2xl font-bold tracking-tighter text-slate-900 font-headline">The Editorial Architect</span>
         </div>
-        <div class="hero-graphics fade-in">
-            <div class="code-window">
-                <div class="window-header">
-                    <span class="dot red"></span>
-                    <span class="dot yellow"></span>
-                    <span class="dot green"></span>
+        <nav class="hidden md:flex items-center gap-8 font-label text-sm font-medium">
+            <a class="text-blue-600 border-b-2 border-blue-600 transition-colors duration-200" href="index.html">Home</a>
+            <a class="text-slate-600 hover:text-blue-500 transition-colors duration-200" href="blog.html">Blog & Tech</a>
+            <a class="text-slate-600 hover:text-blue-500 transition-colors duration-200" href="gaming.html">Gaming</a>
+            <a class="text-slate-600 hover:text-blue-500 transition-colors duration-200" href="about.html">About</a>
+        </nav>
+    </div>
+</header>
+
+<main class="max-w-7xl mx-auto px-6 pt-16 pb-32">
+    <!-- Hero Section -->
+    <section class="mb-32">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-end">
+            <div class="lg:col-span-8">
+                <span class="inline-block bg-primary-container text-[#002150] px-4 py-1 rounded-full text-xs font-bold tracking-widest uppercase mb-6">Portfolio 2026</span>
+                <h1 class="font-headline text-6xl md:text-8xl tracking-tight leading-[0.9] text-on-surface mb-8">
+                    기술과 감성의 <br/><span class="text-primary italic">완벽한 교차점.</span>
+                </h1>
+                <p class="text-on-surface-variant text-xl max-w-2xl leading-relaxed">
+                    컴퓨터 소프트웨어 공학과 신입생 정시우가 공부하며 기록을 남기는 공간입니다. 코딩, 알고리즘, 그리고 개발 일상을 공유합니다.
+                </p>
+            </div>
+            <div class="lg:col-span-4 flex justify-end">
+                <div class="w-full aspect-square hero-gradient rounded-2xl flex items-center justify-center p-12 shadow-2xl rotate-3">
+                    <span class="material-symbols-outlined text-white text-[120px]" data-icon="layers" style="font-variation-settings: 'FILL' 1;">layers</span>
                 </div>
-                <div class="window-body">
-                    <pre><code><span class="keyword">function</span> <span class="function">startJourney</span>() {
-  <span class="comment">// 2026. 신입생 대학 생활 시작</span>
-  <span class="keyword">const</span> passion = <span class="boolean">true</span>;
-  <span class="keyword">while</span>(passion) {
-    <span class="function">learn</span>();
-    <span class="function">code</span>();
-    <span class="function">build</span>();
-  }
-}</code></pre>
+            </div>
+        </div>
+
+    </section>
+
+    <!-- Bento Grid Projects -->
+    <section class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <!-- Main Featured Project -->
+        <div class="md:col-span-2 group relative overflow-hidden bg-white rounded-2xl shadow-sm transition-all duration-500 hover:shadow-2xl p-8">
+            <div class="flex flex-col h-full">
+                <div class="flex justify-between items-start mb-12">
+                    <div>
+                        <h3 class="font-headline text-3xl tracking-tight mb-2">나만의 블로그 웹사이트</h3>
+                        <div class="flex gap-2">
+                            <span class="text-xs font-medium px-3 py-1 bg-surface-container-low rounded-full">HTML</span>
+                            <span class="text-xs font-medium px-3 py-1 bg-surface-container-low rounded-full">Tailwind CSS</span>
+                            <span class="text-xs font-medium px-3 py-1 bg-surface-container-low rounded-full">JS</span>
+                        </div>
+                    </div>
                 </div>
-            </div>
-        </div>
-    </header>
-
-    <main class="container" style="padding-top: 2rem; padding-bottom: 8rem;">
-        <h2 class="page-title fade-in-up" style="font-size: 2.5rem;">What <span class="highlight">I'm Learning</span></h2>
-        <div class="blog-grid fade-in-up delay-1" style="margin-bottom: 6rem;">
-            <div class="blog-card" style="cursor: default; padding: 1.5rem;">
-                <h3 style="margin-top:0; margin-bottom: 0.5rem; color: #38bdf8; font-size: 1.25rem;">📝 C / C++ Programming</h3>
-                <p style="color: #a1a1aa; font-size: 0.95rem; margin: 0;">전공 기초 과목으로 C언어를 수강하고 있습니다. 메모리 구조와 포인터의 개념을 탄탄하게 다지는 중입니다.</p>
-            </div>
-            <div class="blog-card" style="cursor: default; padding: 1.5rem;">
-                <h3 style="margin-top:0; margin-bottom: 0.5rem; color: #38bdf8; font-size: 1.25rem;">💻 Web Development</h3>
-                <p style="color: #a1a1aa; font-size: 0.95rem; margin: 0;">웹 브라우저에서 동작하는 서비스를 직접 만들어보고 싶어 HTML, CSS, JavaScript를 독학하고 있습니다.</p>
-            </div>
-            <div class="blog-card" style="cursor: default; padding: 1.5rem;">
-                <h3 style="margin-top:0; margin-bottom: 0.5rem; color: #38bdf8; font-size: 1.25rem;">🔥 Algorithms</h3>
-                <p style="color: #a1a1aa; font-size: 0.95rem; margin: 0;">논리적 사고력을 기르기 위해 매일 꾸준히 백준 등에서 알고리즘 문제에 도전하고 있습니다.</p>
+                <div class="mt-auto relative">
+                    <img alt="Project" class="w-full h-64 object-cover rounded-xl grayscale hover:grayscale-0 transition-all duration-700" src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?q=80&w=2670&auto=format&fit=crop"/>
+                </div>
+                <p class="mt-8 text-on-surface-variant leading-relaxed">
+                    AI 디자인 도구 '스티치'를 활용하여 기획부터 디자인, 퍼블리싱까지 전 과정을 직접 구현한 포트폴리오 웹사이트입니다. 반응형 디자인과 스무스한 애니메이션이 특징입니다.
+                </p>
             </div>
         </div>
 
-        <h2 class="page-title fade-in-up" style="font-size: 2.5rem;">Recent <span class="highlight">Posts</span></h2>
-        <div class="blog-grid fade-in-up delay-1">
-            <a href="post.html" class="blog-card" style="padding: 1.5rem;">
-                <div class="blog-card-date" style="margin-bottom: 0.5rem;">2026. 03. 31</div>
-                <h3 style="margin-top:0; margin-bottom: 0.5rem; color: var(--fg); font-size: 1.25rem;">소프트웨어 공학과 첫 전공 수업 후기</h3>
-                <p style="color: #a1a1aa; font-size: 0.95rem; margin: 0;">기대 반 걱정 반으로 시작한 첫 전공 수업, C언어 프로그래밍. 변수와 자료형부터 배웠는데...</p>
-            </a>
-            <a href="blog.html" class="blog-card" style="padding: 1.5rem;">
-                <div class="blog-card-date" style="margin-bottom: 0.5rem;">2026. 03. 25</div>
-                <h3 style="margin-top:0; margin-bottom: 0.5rem; color: var(--fg); font-size: 1.25rem;">Git과 GitHub 처음 사용해보기</h3>
-                <p style="color: #a1a1aa; font-size: 0.95rem; margin: 0;">개발자의 필수 교양이라는 Git. add, commit, push의 개념을 정리해본다.</p>
-            </a>
-            <a href="blog.html" class="blog-card" style="display: flex; justify-content: center; align-items: center; text-align: center; border-style: dashed; padding: 1.5rem; background: transparent;">
-                <h3 style="margin:0; color: #38bdf8;">더 많은 글 보기 →</h3>
-            </a>
-        </div>
-
-        <h2 class="page-title fade-in-up" style="font-size: 2.5rem; margin-top: 4rem;">Upcoming <span class="highlight">Projects</span></h2>
-        <div class="blog-grid fade-in-up delay-1" style="margin-bottom: 6rem;">
-            <div class="blog-card" style="cursor: default; padding: 1.5rem; text-align: center;">
-                <div style="font-size: 3rem; margin-bottom: 1rem;">🚀</div>
-                <h3 style="margin-top:0; margin-bottom: 0.5rem; color: var(--fg); font-size: 1.25rem;">나만의 블로그 배포 중 (현재)</h3>
-                <p style="color: #a1a1aa; font-size: 0.95rem; margin: 0;">HTML, CSS, JS만 활용하여 시각적으로 훌륭한 나만의 블로그 만들기를 진행 중입니다!</p>
+        <div class="group bg-[#0b0f10] text-[#f0f2ff] rounded-2xl p-8 flex flex-col justify-between shadow-xl">
+            <div>
+                <span class="material-symbols-outlined text-[#6e9fff] text-4xl mb-6">workspace_premium</span>
+                <h3 class="font-headline text-2xl mb-4 text-white">알고리즘<br/>매일 풀이 레포트</h3>
+                <p class="text-gray-400 text-sm leading-relaxed mb-6">
+                    자료구조와 알고리즘 역량을 키우기 위한 1일 1커밋 프로젝트. 백준 플래티넘을 향한 여정.
+                </p>
             </div>
-            <div class="blog-card" style="cursor: default; padding: 1.5rem; text-align: center;">
-                <div style="font-size: 3rem; margin-bottom: 1rem;">⚙️</div>
-                <h3 style="margin-top:0; margin-bottom: 0.5rem; color: var(--fg); font-size: 1.25rem;">대학 학점 계산기 미니 앱</h3>
-                <p style="color: #a1a1aa; font-size: 0.95rem; margin: 0;">다음 목표: JavaScript를 깊이 응용하여 직접 학점을 관리해주는 미니 웹 어플리케이션 제작</p>
+            <div class="space-y-4">
+                <a href="blog.html" class="w-full bg-white text-black py-4 rounded-xl font-bold flex items-center justify-center gap-2 hover:bg-[#6e9fff] transition-colors">
+                    자세히 보기
+                </a>
             </div>
         </div>
+    </section>
+</main>
 
-        <div style="text-align: center; border-top: 1px solid var(--glass-border); padding-top: 4rem;" class="fade-in-up">
-            <h2 style="font-size: 2.5rem; margin-bottom: 1rem;">Let's <span class="highlight">Connect</span></h2>
-            <p style="color: #a1a1aa; font-size: 1.1rem; margin-bottom: 2rem;">개발에 대한 열정을 함께 나눌 분들을 언제나 환영합니다!</p>
-            <a href="mailto:siwoo@example.com" class="btn primary">이메일 보내기</a>
-            <a href="https://github.com/wjdtldn123-ship-it" target="_blank" class="btn" style="border: 1px solid var(--glass-border); background: var(--glass-bg); margin-left: 1rem; color: white;">GitHub 프로필</a>
-        </div>
-    </main>
-    
-    <script src="script.js"></script>
+<footer class="w-full mt-20 bg-slate-100 border-t border-slate-200">
+    <div class="flex flex-col md:flex-row justify-between items-center px-12 py-8 max-w-7xl mx-auto">
+        <p class="font-['Inter'] text-xs uppercase tracking-widest text-slate-500 mb-4 md:mb-0">
+            © 2026 Siwoo Park | The Editorial Architect.
+        </p>
+    </div>
+</footer>
+
 </body>
 </html>
